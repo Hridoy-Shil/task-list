@@ -1,36 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Task List</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Task List</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
-</head>
-
-<body>
-  <!-- login area start -->
-  <section id="login-area">
+  <body>
     <div class="container">
-      <h2>Task List</h2>
-      <form id="task_form">
-        <input id="new_task" type="text" placeholder="New Tesk" />
-        <input id="author" type="submit" value="Add Task" />
+      <h2>Add Book</h2>
+
+      <form id="book-form">
+        <div class="">
+          <label for="title"> Title</label>
+          <input type="text" id="title" class="u-full-width" />
+        </div>
+
+        <div class="">
+          <label for="author"> Author</label>
+          <input type="text" id="author" class="u-full-width" />
+        </div>
+
+        <div class="">
+          <label for="isbn"> ISBN#</label>
+          <input type="text" id="isbn" class="u-full-width" />
+        </div>
+
+        <div class="">
+          <input type="submit" value="Submit" class="u-full-width" />
+        </div>
       </form>
-      <hr />
-      <h3>Task</h3>
-      <input id="task_filter" type="text" placeholder="Filter Task" />
 
-      <ul id="tasks"></ul>
-
-      <button id="clear_task_btn" class="btn btn-success" type="submit">
-        Clear Tasks
-      </button>
+      <table class="u-full-width">
+        <thead>
+          <hr />
+          <th>Title</th>
+          <th>Author</th>
+          <th>ISBN#</th>
+          <th></th>
+        </thead>
+        <tbody id="book-list"></tbody>
+      </table>
     </div>
-  </section>
-  <!-- login area end -->
+    <!-- login area end -->
 
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
